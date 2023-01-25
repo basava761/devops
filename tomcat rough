@@ -1,0 +1,14 @@
+52.66.241.116:8080
+changed port to 8006
+52.66.241.116:8006
+52.66.241.116:8005
+
+conf/tomcat-users.xml,context.xml
+
+<role rolename="manager-gui"/>
+<user username="tomcat" password="tomcat" roles="manager-gui,manager-script"/>
+Users with the manager-gui role should not be granted either the manager-script or manager-jmx roles.
+
+
+org.xml.sax.SAXParseException; systemId: file:/opt/tomcat/conf/server.xml; lineNumber: 22; columnNumber: 30; Element type "Server" must be followed by either attribute specifications, ">" or "/>".
+

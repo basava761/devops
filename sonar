@@ -1,0 +1,54 @@
+sonar:
+65.0.71.231:9000
+un:admin
+pwd:admin123
+
+
+http://65.0.71.231:9000/
+http://65.0.71.231:9000/
+
+
+sonar access token:squ_a6cf9f6683806458a3df0b815374ea948d4e2e0c
+
+
+
+=============================================j2================================================
+services as follows.
+useradd sonar
+
+Give the sudo access to sonar user
+visudo
+
+sonar   ALL=(ALL)       NOPASSWD: ALL
+
+
+
+chown -R sonar:sonar /opt/sonarqube/
+chmod -R 775 /opt/sonarqube/
+su - sonar
+cd /opt/sonarqube/bin/linux-x86-64/
+
+./sonar.sh start
+
+
+13.232.2.179:9000
+http://13.232.2.179:9000
+sonar token:squ_16aa912f5a382b2ad5c0c2a87bc579225f826659
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

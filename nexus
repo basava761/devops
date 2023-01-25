@@ -1,0 +1,112 @@
+nexus:
+65.2.187.245:8081
+
+
+/opt/sonatype-work/nexus3/admin.password
+
+
+
+
+kotak
+release -1 http://65.2.187.245:8081/repository/kotak-release-1/
+
+release-2: http://65.2.187.245:8081/repository/kotak-release-2/
+
+snapshot -1:http://65.2.187.245:8081/repository/kotak-snapshot/
+
+http://65.2.187.245:8081/#browse/browse:kotak-snapshot
+
+
+
+13.235.114.240:8081
+====================================================================j2==================================================================
+#As a good security practice, Nexus is not advised to run nexus service as a root user, so create a new user called nexus and grant sudo access to manage nexus services as follows.
+ 
+useradd nexus
+
+
+#Give the sudo access to nexus user
+
+visudo
+nexus ALL=(ALL) NOPASSWD: ALL
+
+
+
+#Change the owner and group permissions to /opt/nexus and /opt/sonatype-work directories.
+
+chown -R nexus:nexus /opt/nexus
+chown -R nexus:nexus /opt/sonatype-work
+chmod -R 775 /opt/nexus
+chmod -R 775 /opt/sonatype-work
+
+
+
+#Open /opt/nexus/bin/nexus.rc file and  uncomment run_as_user parameter and set as nexus user.
+
+vi /opt/nexus/bin/nexus.rc
+run_as_user="nexus"
+
+
+#Create nexus as a service
+
+ln -s /opt/nexus/bin/nexus /etc/init.d/nexus
+
+#Switch as a nexus user and start the nexus service as follows.
+
+sudo su - nexus
+
+#Enable the nexus services
+sudo systemctl enable nexus
+
+#Start the nexus service
+sudo systemctl start nexus
+
+
+65.0.170.157:8081
+
+360e0c1d-7b39-4452-93be-26120ea367d5
+
+release:http://65.0.170.157:8081/repository/Rdcc-release/
+
+snapshot:http://65.0.170.157:8081/repository/Rdcc-snapshot/
+
+
+
+  <server>
+      <id>nexus</id>
+      <username>admin</username>
+      <password>admin123</password>
+    </server>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

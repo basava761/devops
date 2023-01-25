@@ -1,0 +1,13 @@
+j2 maven:
+
+
+vi ~/.bash_profile:
+
+
+
+export M2_HOME=/opt/maven
+
+export PATH=$PATH:$M2_HOME/bin
+
+
+source ~/.bash_profile

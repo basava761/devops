@@ -1,0 +1,26 @@
+jenkins
+
+3.110.208.93:8080
+initial pwd:4b0ac09a76fa4ce6abb1d8d65a62c8af
+
+
+http://3.110.208.93:8080/
+
+===================================j2=====================
+3.110.175.127:8080
+
+
+http://3.110.175.127:8080/
+
+
+
+github credentials token
+
+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
+
+
+http://3.110.175.127:8080/github-webhook
+
+for Restarting server
+http://3.110.175.127:8080/restart,it ill restart jenkins immidiately
+http://3.110.175.127:8080/safeRestart,it ill restarts once all buids are completed running

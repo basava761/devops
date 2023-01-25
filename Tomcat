@@ -1,0 +1,40 @@
+tomcat new session
+
+13.232.71.231:8080
+after modifying port number:13.232.71.231:8000
+
+13.232.71.231:8000/maven-web-application
+
+
+
+
+role rolename="manager-gui"/>
+<user username="tomcat" password="s3cret" roles="manager-gui"/>
+<user username="user1" password="s3cret" roles="manager-gui"/>
+<user username="user2" password="s3cret" roles="admin-gui"/>
+
+
+=======================================================j2======================================================
+
+#Create a system user called tomcat.
+
+cd /opt/apache-tomcat-9.0.70/bin
+chmod u+x *.sh
+
+
+
+
+ln -s /opt/tomcat/bin/startup.sh /usr/bin/startTomcat
+ln -s /opt/tomcat/bin/shutdown.sh /usr/bin/stopTomcat
+
+
+startTomcat
+#stopTomcat
+
+change port number in server.xml in tomcat/conf
+
+http://3.110.164.227:8000/
+
+http://3.110.164.227:8000/maven-web-application
+
+

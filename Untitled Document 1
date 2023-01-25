@@ -1,0 +1,15 @@
+git project code:
+https://github.com/basava761/maven-web-application.git
+
+
+
+git credentialsId: 'c515a88b-3030-47c7-af75-cd6de491007f', url: 'https://github.com/basava761/maven-web-application.git'
+
+
+sshagent(['ffc8708b-152a-4bfc-9334-f3590981aa1b']) 
+sshagent(['2c11d075-d85a-42e7-85d2-d7701ec803cd'])
+
+
+
+
+properties([buildDiscarder(logRotator(artifactDaysToKeepStr: '', artifactNumToKeepStr: '', daysToKeepStr: '3', numToKeepStr: '3')), disableConcurrentBuilds(), disableResume(), [$class: 'JobLocalConfiguration', changeReasonComment: ''], pipelineTriggers([upstream(threshold: 'ABORTED', upstreamProjects: ''), pollSCM('* * * * *')])])
